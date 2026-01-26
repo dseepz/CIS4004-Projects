@@ -3,3 +3,14 @@
   <head>
     <title>Devin Seepersaud's Resume</title>
   </head>
+  <body>
+    <header>
+      <h1>Devin Seepersaud</h>
+
+      <address>
+        <p>
+          <a>devin.seepersaud2@gmail.com</a>
+          <a>https://www.linkedin.com/in/devin-seepersaud-b3bab5369/</a>
+        </p>
+      <address>
+    </header>
