@@ -1,0 +1,98 @@
+/* basic setup */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* SIDEBAR: left menu */
+#jumpMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    background-color: #DDD618;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center; 
+}
+
+/* MAIN CONTENT AREA */
+main {
+    margin-left: 15%;
+}
+
+/* HEADER CONTAINER: fixed to top */
+header {
+    position: fixed;
+    top: 0;
+    left: 15%;
+    width: 85%;
+    background-color: red; / Top part is red /
+    z-index: 1;
+    text-align: center;
+}
+
+/* HEADER TITLE: MyBlog.com */
+header p {
+    margin: 0;
+    padding: 15px; /* Spacing for the white top part */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* HEADER BOTTOM STRIP: The black bar */
+header nav {
+    background-color: black; /* Black is ONLY here now */
+    padding: 10px;
+}
+
+/* BUTTONS: Blue boxes */
+header nav button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* PAGE TITLE: push down to clear the header */
+h1 {
+    margin-top: 160px; /* pushed down a bit more */
+    text-align: center;
+}
+
+/* ARTICLES: invisible boxes */
+#container {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+article {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
+    /* no border or background color here anymore */
+}
+
+/* CORNER BOX */
+#thanks {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #ADD8E6;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 15px;
+    z-index: 1;
+}
+
+footer {
+    padding: 20px;
+    background-color: #eee;
+    margin-top: 20px;
+}
