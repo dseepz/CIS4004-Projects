@@ -1,0 +1,149 @@
+/* 1. THE SIDEBAR (LEFT BANNER) */
+#menuItems {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    background-color: black;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Touching Royal Blue Boxes */
+#menuItems button {
+    display: block;
+    width: 100%;
+    background-color: #4169E1; /* Royal Blue */
+    color: white;
+    border: none;
+    padding: 15px 0;
+    margin: 0; 
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+#menuItems button:hover {
+    background-color: #27408B; /* Darker blue on hover */
+}
+
+/* 2. JUMP MENU LOGIC */
+#jumpMenu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+#recentArticles:hover + #jumpMenu, 
+#jumpMenu:hover {
+    display: block;
+}
+
+#jumpMenu li a {
+    display: block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#jumpMenu li a:hover {
+    background-color: #4169E1;
+    color: #DDD618; /* Yellow font change requirement */
+}
+
+/* 3. HEADER & SPACING */
+header {
+    position: fixed;
+    top: 0;
+    left: 15%;
+    width: 85%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    z-index: 5;
+    height: 60px;
+}
+
+header p {
+    margin: 0;
+    line-height: 60px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+main {
+    margin-left: 15%;
+}
+
+h1 {
+    margin-top: 80px; /* Space for the fixed header */
+    text-align: center;
+}
+
+/* 4. ARTICLES & TRANSITIONS */
+#container {
+    text-align: center;
+}
+
+article {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+    padding: 15px;
+    text-align: left;
+    color: #aaaaaa; /* Requirement: Initially lightly-colored text */
+    transition: all 2s; /* Requirement: Transition over 2 seconds */
+}
+
+/* Requirement: Darker text and expand on hover */
+article:hover {
+    color: #000000; /* Fade to black */
+    transform: scale(1.05);
+}
+
+/* DROP-CAP: First letter requirements */
+article p:first-of-type::first-letter {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 36px;
+    float: left;
+    line-height: 1;
+    padding-right: 5px;
+    color: #aaaaaa; /* Requirement: Starts gray to match the requirement */
+}
+
+/* Requirement: First letter turns black when the article is hovered */
+article:hover p:first-of-type::first-letter {
+    color: #000000;
+}
+
+/* 5. GOOGLE LINKS */
+a[href*="google.com"]::after {
+    content: url('https://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png');
+    margin-left: 5px;
+}
+
+/* 6. FOOTER & EXTRAS */
+#thanks {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ADD8E6;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+footer {
+    background-color: #eee;
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
