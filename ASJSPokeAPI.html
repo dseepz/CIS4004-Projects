@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Pokemon Team Builder</title>
+  <style>
+    .wrap { max-width: 520px; margin: 20px auto; font-family: Arial, sans-serif; }
+    .card { border: 2px solid #d4a100; border-radius: 16px; padding: 18px; background: #fff; }
+    .row { display: flex; gap: 10px; align-items: center; justify-content: center; margin: 10px 0; }
+    img { display: block; margin: 10px auto; width: 180px; height: 180px; image-rendering: pixelated; }
+    select { width: 48%; }
+    .moves { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    td { border: 1px solid #333; padding: 8px; vertical-align: top; }
+    ul { margin: 0; padding-left: 18px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="row">
+        <label for="query"><b>Name or ID</b></label>
+      </div>
+
+      <div class="row">
+        <input id="query" type="text" placeholder="e.g. 143 or snorlax" />
+        <button id="findBtn" type="button">Find</button>
+      </div>
+
+      <img id="sprite" alt="pokemon sprite" hidden />
+      <div class="row">
+        <audio id="cry" controls hidden></audio>
+      </div>
+
+      <div class="moves">
+        <select id="move1"></select>
+        <select id="move2"></select>
+        <select id="move3"></select>
+        <select id="move4"></select>
+      </div>
+
+      <div class="row">
+        <button id="addBtn" type="button" disabled>Add to Team</button>
+      </div>
+
+      <table id="teamTable" hidden>
+        <tbody id="teamBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="ASJSPokeAPI.js"></script>
+</body>
+</html>
